@@ -21,6 +21,13 @@
     list-style: none;
 }
 
+.board-columns > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .task-list {
     border-left: 1px solid black;
     border-right: 1px solid black;

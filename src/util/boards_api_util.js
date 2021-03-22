@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export const fetchUserBoards = userId => {
-    const obj = {
+    const payload = {
         userId
     }
-    return axios.post("/api/users/boards", obj);
+    return axios.post("/api/users/boards", payload);
 }
 
 export const fetchBoard = boardId => {
@@ -16,5 +16,8 @@ export const addBoard = board => {
 }
 
 export const deleteBoard = boardId => {
-    return axios.delete("api/boards", { boardId })
+    const payload = {
+        boardId : boardId
+    }
+    return axios.delete("api/boards", { data: payload })
 }

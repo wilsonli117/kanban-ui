@@ -32,6 +32,9 @@ const SessionForm = (props) => {
         } else {
             dispatch(signup({ username, password }))
         }
+        setUsername("");
+        setPassword("");
+        setFormType("login");
     }
 
     const handleLogout = () => {

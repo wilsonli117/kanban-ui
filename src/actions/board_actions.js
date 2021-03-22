@@ -33,8 +33,8 @@ export const fetchUserBoards = userId => dispatch => {
         .catch(error => console.log(error))
 }
 
-export const fetchBoard = boardIds => dispatch => {
-    return BoardAPIUtil.fetchBoard(boardIds)
+export const fetchBoard = boardId => dispatch => {
+    return BoardAPIUtil.fetchBoard(boardId)
         .then(res => {
             return dispatch(receiveBoard(res.data.board));
         })
