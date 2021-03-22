@@ -13,12 +13,13 @@ const BoardForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addBoard({ name, userId}))
+        dispatch(addBoard({ name, userId }))
+        setName("")
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name
+            <label htmlFor="name">
                 <input id="name" value={name} onChange={handleChange}></input>
             </label>
             <button>Create Board</button>

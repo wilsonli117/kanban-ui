@@ -1,0 +1,33 @@
+.board {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 1000px;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.board-name {
+    width: 100%;
+    text-align: center;
+}
+
+.board-columns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.task-list {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+.board-columns li h2 {
+    text-align: center;
+}
+

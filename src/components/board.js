@@ -1,8 +1,10 @@
 import React from "react";
+import "../stylesheets/board.css";
 
 const Board = props => {
-    const name = props.board.name;
+    const name = props.board.name
     const buckets = props.board.buckets;
+    const tasks = props.board.tasks;
 
     const columns = buckets.map(bucketName => {
         return (
@@ -16,11 +18,14 @@ const Board = props => {
     })
 
     return (
-        <>
-            <h1>{name}</h1>
-            <ul className="">
+        <div className="board">
+            <h1 className="board-name">{name}</h1>
+            <ul className="board-columns">
                 {columns}
             </ul>
-        </>
+        </div>
+          
     )
 }
+
+export default Board;

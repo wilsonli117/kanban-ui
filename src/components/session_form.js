@@ -50,7 +50,7 @@ const SessionForm = (props) => {
     if (formType === "login") {
         return (
             <>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="session">
                     <label htmlFor="username">Username
                         <input id="username" value={username} onChange={(e) => handleChange("username", e)}></input>
                     </label>
@@ -65,7 +65,7 @@ const SessionForm = (props) => {
     } else {
         return (
             <>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="session">
                     <label htmlFor="username">Username
                         <input id="username" value={username} onChange={(e) => handleChange("username", e)}></input>
                     </label>
