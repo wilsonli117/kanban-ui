@@ -11,7 +11,7 @@ export default (state = {}, action) => {
             })
             return boards;
         case RECEIVE_BOARD:
-            newState[action.board.id] = action.board;
+            newState[action.board._id] = action.board;
             return newState;
         case REMOVE_BOARD:
             delete newState.action.boardId

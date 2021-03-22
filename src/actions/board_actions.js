@@ -12,6 +12,7 @@ export const receiveBoards = boards => {
 }
 
 export const receiveBoard = board => {
+    debugger;
     return {
         type: RECEIVE_BOARD,
         board
@@ -44,7 +45,7 @@ export const fetchBoard = boardIds => dispatch => {
 export const addBoard = board => dispatch => {
     return BoardAPIUtil.addBoard(board)
         .then(res => {
-            return dispatch(receiveBoard(res.data.board));
+            return dispatch(receiveBoard(res.data));
         })
         .catch (error => console.log(error))
 }
