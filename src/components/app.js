@@ -15,9 +15,9 @@ const App = () => {
     }, [currentUser])
     const boards = useSelector(state => state.entities.boards);
     const [openBoard, setOpenBoard] = useState(Object.values(boards)[0]);
-    const userBoardNames = Object.values(boards).map(board => {
+    const userBoardNames = Object.values(boards).map((board, idx) => {
         return (
-            <li>{board.name}</li>
+            <li key={idx}>{board.name}</li>
         )
     })
 

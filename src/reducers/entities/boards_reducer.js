@@ -7,11 +7,11 @@ export default (state = {}, action) => {
         case RECEIVE_BOARDS:
             const boards = {};
             action.boards.forEach(board => {
-                boards[board.id] = board
+                boards[board._id] = board
             })
             return boards;
         case RECEIVE_BOARD:
-            newState[action.board._id] = action.board;
+            newState[action.board.id] = action.board;
             return newState;
         case REMOVE_BOARD:
             delete newState.action.boardId

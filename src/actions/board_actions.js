@@ -12,7 +12,6 @@ export const receiveBoards = boards => {
 }
 
 export const receiveBoard = board => {
-    debugger;
     return {
         type: RECEIVE_BOARD,
         board
@@ -29,7 +28,7 @@ export const removeBoard = boardId => {
 export const fetchUserBoards = userId => dispatch => {
     return BoardAPIUtil.fetchUserBoards(userId)
         .then(res => {
-            return dispatch(receiveBoards(res.data.boards))
+            return dispatch(receiveBoards(res.data))
         })
         .catch(error => console.log(error))
 }
