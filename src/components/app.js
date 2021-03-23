@@ -26,14 +26,22 @@ const App = () => {
     useEffect(() => {
         if (openBoard) {
             dispatch(fetchBoard(openBoard._id))
-            dispatch(fetchTasks(openBoard.tasks))
+                .then(
+                    dispatch(fetchTasks(openBoard.tasks))
+                )
         }
     }, [openBoard])
- 
 
     const handleOpenBoard = e => {
         const index = parseInt(e.target.getAttribute("index"))
-        setOpenBoard(Object.values(boards)[index]);
+        if (!openBoard) {
+            setOpenBoard(Object.values(boards)[index]);
+        } else {
+            if (Object.values(boards)[index]._id !== openBoard._id) {
+                setOpenBoard(Object.values(boards)[index]);
+            }
+        }
+
     }
 
     const removeBoard = e => {

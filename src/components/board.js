@@ -5,6 +5,7 @@ import Task from "./task";
 import "../stylesheets/board.css";
 
 const Board = props => {
+    const dispatch = useDispatch();
     const name = props.board.name
     const buckets = props.board.buckets;
     const tasks = useSelector(state => state.entities.tasks);
