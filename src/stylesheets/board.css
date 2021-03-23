@@ -24,13 +24,16 @@
 .board-columns > li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .task-list {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    height: 550px;
+    width: 275px;
+    padding: 10px 20px 10px 20px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 

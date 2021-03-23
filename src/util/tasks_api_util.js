@@ -5,7 +5,7 @@ export const fetchTasks = taskIds => {
         taskIds
     }
 
-    return axios.post("/api/tasks", payload )
+    return axios.post("/api/boards/tasks", payload )
 }
 
 export const fetchTask = taskId => {
@@ -20,5 +20,5 @@ export const deleteTask = taskId => {
     const payload = {
         taskId : taskId
     }
-    return axios.delete("api/boards", { data: payload })
+    return axios.delete("api/tasks", { data: payload })
 }

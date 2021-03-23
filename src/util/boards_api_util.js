@@ -8,7 +8,7 @@ export const fetchUserBoards = userId => {
 }
 
 export const fetchBoard = boardId => {
-    return axios.get("/api/boards", { boardId })
+    return axios.get("/api/boards", { params : { boardId }})
 }
 
 export const addBoard = board => {
